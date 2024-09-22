@@ -21,9 +21,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::prefix('admin')->middleware('auth')->group(function(){
-    Route::get('/dashboard', function () {
-        return view('admin.dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class,'adminDashboard'])->name('dashboard');
     Route::get('/event-list',[EventController::class,'index'])->name('event.list');
     Route::get('/event-create',[EventController::class,'create'])->name('event.create');
     Route::post('/event-store',[EventController::class,'store'])->name('event.store');

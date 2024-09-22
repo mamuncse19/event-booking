@@ -13,4 +13,10 @@ class DashboardController extends Controller
         $eventInfo = Event::orderBy('date','asc')->get();
         return view('index',compact('eventInfo'));
     }
+
+    public function adminDashboard(): View
+    {
+        $totalEvent = Event::count();
+        return view('admin.dashboard',compact('totalEvent'));
+    }
 }
