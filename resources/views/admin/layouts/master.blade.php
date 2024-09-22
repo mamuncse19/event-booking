@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="csrf-token" content="{{ csrf_token() }}"/>
         <title>@yield('title')</title>
+        <link rel="shortcut icon" href="{{URL::to(config('app.asset').'favicon.ico')}}"/>
         <!-- vendor css -->
         <link href="{{asset(config('app.asset').'admin/lib/font-awesome/css/font-awesome.css')}}" rel="stylesheet">
         <link href="{{asset(config('app.asset').'admin/lib/Ionicons/css/ionicons.css')}}" rel="stylesheet">

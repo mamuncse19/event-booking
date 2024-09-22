@@ -23,4 +23,4 @@
     </div><!-- sl-sideleft-menu -->
 
 </div><!-- sl-sideleft -->
-<?php /**PATH D:\laragon\www\event-booking\resources\views/admin/layouts/sidebar.blade.php ENDPATH**/ ?>
+<?php /**PATH F:\laragon\www\event-booking\resources\views/admin/layouts/sidebar.blade.php ENDPATH**/ ?>

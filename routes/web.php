@@ -2,11 +2,13 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\BookingController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [DashboardController::class,'index']);
+Route::get('/book-ticket', [BookingController::class,'create'])->name('ticket.create');
+Route::post('/book-seats', [BookingController::class,'bookSeats'])->name('book.seat');
 
 Route::get('/admin-panel', function () {
     return redirect()->route('dashboard');

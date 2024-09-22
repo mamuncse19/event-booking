@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Conference</title>
-
+    <title>Event Booking System</title>
+    <link rel="shortcut icon" href="{{URL::to(config('app.asset').'favicon.ico')}}"/>
     <!-- css -->
     <link rel="stylesheet" href="{{asset(config('app.asset').'frontend/bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset(config('app.asset').'frontend/bower_components/ionicons/css/ionicons.min.css')}}">
@@ -19,7 +19,7 @@
 
                 <!-- logo -->
                 <div class="site-branding">
-                    <a class="logo" href="index.html">
+                    <a class="logo" href="{{url('/')}}">
 
                         <!-- logo image  -->
                         <img src="{{asset(config('app.asset').'frontend/assets/images/logo.png')}}" alt="Logo">
@@ -42,12 +42,9 @@
 
                     <!-- navigation menu -->
                     <li class="active"><a data-scroll href="#about">About</a></li>
-                    <li><a data-scroll href="#speakers">Speakers</a></li>
                     <li><a data-scroll href="#schedule">Schedule</a></li>
                     <li><a data-scroll href="#partner">Partner</a></li>
-                    <!-- <li><a data-scroll href="#">Sponsorship</a></li> -->
-                    <li><a data-scroll href="#faq">FAQ</a></li>
-                    <li><a data-scroll href="#photos">Photos</a></li>
+                    <li><a href="{{route('ticket.create')}}">Book Ticket</a></li>
 
                 </ul>
             </div>
@@ -57,13 +54,13 @@
     <header id="site-header" class="site-header valign-center">
         <div class="intro">
 
-            <h2>25 April, 2015 / Townhall California</h2>
+            <h2>11 October, 2024 / Dhaka</h2>
 
-            <h1>Freelancer Conference 2015</h1>
+            <h1>Freelancer Conference 2024</h1>
 
             <p>First &amp; Largest Conference</p>
 
-            <a class="btn btn-white" data-scroll href="#registration">Register Now</a>
+            <a class="btn btn-white" href="{{route('ticket.create')}}">Book Ticket</a>
 
         </div>
     </header>
@@ -111,33 +108,23 @@
                 </div>
             </div>
             <div class="row">
+                @forelse ($eventInfo as $event)
                 <div class="col-md-4 col-sm-6">
                     <div class="schedule-box">
                         <div class="time">
-                            <time datetime="09:00">09:00 am</time> - <time datetime="22:00">10:00 am</time>
+                            <time datetime="09:00">{{ $event->date->format('j M, Y, g:i a') }}
                         </div>
-                        <h3>Welcome and intro</h3>
-                        <p>Mustafizur Khan, SD Asia</p>
+                        <h3>{{ $event->name }}</h3>
+                        <p>Available Seats: {{ $event->available_seats }}</p>
                     </div>
                 </div>
+                @empty
                 <div class="col-md-4 col-sm-6">
                     <div class="schedule-box">
-                        <div class="time">
-                            <time datetime="10:00">10:00 am</time> - <time datetime="22:00">10:00 am</time>
-                        </div>
-                        <h3>Tips and share</h3>
-                        <p>Mustafizur Khan, SD Asia</p>
+                        <p>No upcoming events at the moment. Please check back later.</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="schedule-box">
-                        <div class="time">
-                            <time datetime="10:00">10:00 am</time> - <time datetime="22:00">10:00 am</time>
-                        </div>
-                        <h3>View from the top</h3>
-                        <p>Mustafizur Khan, SD Asia</p>
-                    </div>
-                </div>
+                @endforelse
             </div>
     </section>
 
@@ -183,13 +170,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <p class="site-info">Designed and <br> Developed by <a href="http://technextit.com">Technext Limited</a></p>
-                    <ul class="social-block">
-                        <li><a href=""><i class="ion-social-twitter"></i></a></li>
-                        <li><a href=""><i class="ion-social-facebook"></i></a></li>
-                        <li><a href=""><i class="ion-social-linkedin-outline"></i></a></li>
-                        <li><a href=""><i class="ion-social-googleplus"></i></a></li>
-                    </ul>
+                    <p class="site-info">&copy; {{date('Y')}} Mamun Hossain. All Rights Reserved</p>
+
                 </div>
             </div>
         </div>

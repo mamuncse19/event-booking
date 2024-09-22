@@ -22,4 +22,4 @@
         </nav>
     </div><!-- sl-header-right -->
 </div><!-- sl-header -->
-<?php /**PATH D:\laragon\www\event-booking\resources\views/admin/layouts/header.blade.php ENDPATH**/ ?>
+<?php /**PATH F:\laragon\www\event-booking\resources\views/admin/layouts/header.blade.php ENDPATH**/ ?>

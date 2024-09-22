@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>"/>
         <title><?php echo $__env->yieldContent('title'); ?></title>
+        <link rel="shortcut icon" href="<?php echo e(URL::to(config('app.asset').'favicon.ico')); ?>"/>
         <!-- vendor css -->
         <link href="<?php echo e(asset(config('app.asset').'admin/lib/font-awesome/css/font-awesome.css')); ?>" rel="stylesheet">
         <link href="<?php echo e(asset(config('app.asset').'admin/lib/Ionicons/css/ionicons.css')); ?>" rel="stylesheet">
@@ -203,4 +204,4 @@ swalWithBootstrapButtons.fire({
 </html>
 
 
-<?php /**PATH D:\laragon\www\event-booking\resources\views/admin/layouts/master.blade.php ENDPATH**/ ?>
+<?php /**PATH F:\laragon\www\event-booking\resources\views/admin/layouts/master.blade.php ENDPATH**/ ?>

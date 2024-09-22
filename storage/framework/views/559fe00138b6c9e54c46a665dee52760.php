@@ -78,4 +78,4 @@ case 'info':
     </body>
 </html>
 
-<?php /**PATH D:\laragon\www\event-booking\resources\views/auth/login.blade.php ENDPATH**/ ?>
+<?php /**PATH F:\laragon\www\event-booking\resources\views/auth/login.blade.php ENDPATH**/ ?>

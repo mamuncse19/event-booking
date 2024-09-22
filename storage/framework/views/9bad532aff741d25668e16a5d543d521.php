@@ -3,4 +3,4 @@
         <div class="mg-b-2" style="display: inline-block;">&copy; <?php echo e(date('Y')); ?> Mamun Hossain. All Rights Reserved</div>
     </div>
 
-</footer><?php /**PATH D:\laragon\www\event-booking\resources\views/admin/layouts/footer.blade.php ENDPATH**/ ?>
+</footer><?php /**PATH F:\laragon\www\event-booking\resources\views/admin/layouts/footer.blade.php ENDPATH**/ ?>
